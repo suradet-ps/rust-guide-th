@@ -1,0 +1,96 @@
+.note {
+	margin: 20px;
+	padding: 0 20px;
+	border-inline-start: 2px solid var(--note-border);
+}
+
+.note:before {
+	position: absolute;
+	width: 3rem;
+	height: 3rem;
+	margin-inline-start: calc(-1.5rem - 21px);
+	content: "ⓘ";
+	text-align: center;
+	background-color: var(--bg);
+	color: var(--note-border);
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+blockquote .note:before {
+	background-color: var(--quote-bg);
+}
+
+.reco {
+	margin: 20px;
+	padding: 0 20px;
+}
+
+blockquote .reco:before {
+	background-color: var(--quote-bg);
+}
+
+.reco:before {
+	content: attr(type) " " attr(id) " - " attr(title);
+	font-weight: bold;
+}
+
+.examplereco {
+	margin: 20px;
+	padding: 0 20px;
+}
+
+blockquote .examplereco:before {
+	background-color: var(--quote-bg);
+}
+
+.examplereco:before {
+	content: attr(type) " " attr(id) " - " attr(title);
+	font-weight: bold;
+}
+
+code.should_panic {
+	background-color: rgba(255, 0, 0, 0.3);
+}
+
+code.bad {
+	background-color: rgba(255, 153, 0, 0.3);
+}
+
+code.good {
+	background-color: rgba(43, 255, 0, 0.3);
+}
+
+code.ub {
+	background-color: rgba(255, 0, 0, 1);
+}
+
+* {
+	--note-border: #0096cf;
+	--rule-border: #ff0000;
+	--reco-border: rgb(189, 64, 6);
+}
+
+[type="Recommendation"] {
+	border-inline-start: 4px solid var(--reco-border) !important;
+}
+
+[type="Rule"] {
+	border-inline-start: 4px solid var(--rule-border) !important;
+}
+
+[type="Recommandation"] {
+	border-inline-start: 4px solid var(--reco-border) !important;
+}
+
+[type="Règle"] {
+	border-inline-start: 4px solid var(--rule-border) !important;
+}
+
+[type="กฎ"] {
+	border-inline-start: 4px solid var(--rule-border) !important;
+}
+
+[type="ข้อเสนอแนะ"] {
+	border-inline-start: 4px solid var(--reco-border) !important;
+}

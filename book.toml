@@ -1,0 +1,32 @@
+[book]
+title = "แนวทางพัฒนาแอปพลิเคชัน Rust อย่างปลอดภัย (ฉบับภาษาไทย)"
+description = "ข้อเสนอแนะสำหรับการพัฒนาแอปพลิเคชันที่ปลอดภัยด้วยภาษา Rust"
+src = "src/th"
+language = "th"
+
+[build]
+build-dir = "book"
+
+[output.html]
+git-repository-url = "https://github.com/suradet-ps/rust-guide-th"
+edit-url-template = "https://github.com/suradet-ps/rust-guide-th/edit/main/src/th/{path}"
+additional-js = [
+	"vars-th.js",
+	"custom-envs.js",
+]
+additional-css = [
+	"custom-envs.css",
+]
+smart-punctuation = true
+
+[preprocessor.checklist]
+title = "รายการข้อกำหนดและข้อเสนอแนะ"
+renderers = ["html"]
+after = ["links", "extensions"]
+
+[preprocessor.extensions.cite-proc]
+section-name = "แหล่งอ้างอิง"
+renderers = ["html"]
+
+[preprocessor.code-align]
+after = ["links", "extensions"]
