@@ -7,6 +7,9 @@
 | secure application | แอปพลิเคชันที่ปลอดภัย | |
 | security | ความปลอดภัย | |
 | safety / soundness | ความปลอดภัย / ความถูกต้องตามหลักความปลอดภัย (soundness) | soundness หมายถึงการไม่เปิดช่องให้เกิด undefined behavior |
+| security | ความมั่นคงปลอดภัย (security) | ใช้เมื่อต้นฉบับแยก *safety* กับ *security* ออกจากกันอย่างชัดเจน |
+| implementation-defined | ขึ้นอยู่กับการนำไปใช้ (implementation-defined) | ไม่ใช้ "ขึ้นอยู่กับผู้พัฒนา" |
+| manually | ด้วยตนเอง | ใช้คำเดียวกันทั้งเล่ม |
 | memory safety | ความปลอดภัยของหน่วยความจำ (memory safety) | |
 | undefined behavior (UB) | พฤติกรรมไม่นิยาม (undefined behavior / UB) | |
 | ownership | ความเป็นเจ้าของ (ownership) | |

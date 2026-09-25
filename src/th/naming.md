@@ -13,13 +13,13 @@ references:
 # การตั้งชื่อ
 
 ไลบรารีมาตรฐาน (standard library) ทำหน้าที่เป็นมาตรฐานโดยพฤตินัยสำหรับแนวทางการตั้งชื่อใน Rust
-ได้มีความพยายามทำให้แนวทางเหล่านี้เป็นทางการผ่าน [RFC 43 @RFC-430] และต่อมาใน [Rust API Guidelines @rust-guidelines]
+มีความพยายามที่จะทำให้แนวทางเหล่านี้เป็นทางการผ่าน [RFC 43 @RFC-430] และต่อมาใน [Rust API Guidelines @rust-guidelines]
 
 กฎพื้นฐาน [`(C-CASE)`] ประกอบด้วยการใช้:
 
-- `UpperCamelCase` สำหรับชนิดข้อมูล เทรต ตัวแปรของอีนัม (enum variant) และพารามิเตอร์ชนิดข้อมูลทั่วไป
+- `UpperCamelCase` สำหรับชนิดข้อมูล เทรต เวเรียนต์ของอีนัม (enum variant) และพารามิเตอร์ชนิดข้อมูลแบบทั่วไป
 - `snake_case` สำหรับฟังก์ชัน เมธอด มาโคร ตัวแปร และมอดูล
-- `SCREAMING_SNAKE_CASE` สำหรับสแตติก (static) ค่าคงที่ (constant) และพารามิเตอร์ค่าคงที่ทั่วไป
+- `SCREAMING_SNAKE_CASE` สำหรับสแตติก (static) ค่าคงที่ (constant) และพารามิเตอร์ค่าคงที่แบบทั่วไป
 - `'lowercase` สำหรับไลฟ์ไทม์ (lifetime)
 
 [Rust API Guidelines @rust-guidelines] ยังกำหนดแนวทางการตั้งชื่อที่แม่นยำยิ่งขึ้นสำหรับ
@@ -29,14 +29,14 @@ references:
 - [`(C-GETTER)`] สำหรับเก็ตเตอร์ (getter)
 - [`(C-ITER)`] สำหรับเมธอดที่สร้างอีเทอเรเตอร์ (iterator-producing method)
 - [`(C-ITER-TY)`] สำหรับชนิดข้อมูลอีเทอเรเตอร์ (iterator type)
-- [`(C-FEATURE)`] สำหรับการตั้งชื่อฟีเจอร์ (feature) (ฟังก์ชันการทำงานที่เปิดใช้ตามเงื่อนไข)
+- [`(C-FEATURE)`] สำหรับการตั้งชื่อฟีเจอร์ (feature) ซึ่งเป็นฟังก์ชันการทำงานที่เปิดใช้ตามเงื่อนไข
 - [`(C-WORD-ORDER)`] สำหรับความสม่ำเสมอของลำดับคำ (word order)
 
 <div class="note">
 
 กฎพื้นฐาน [`(C-CASE)`] ถูกตรวจสอบโดยคอมไพเลอร์ (ด้วยชุดลินต์ `nonstandard_style`)
 
-นอกจากคอมไพเลอร์แล้ว เครื่องมือ [`clippy`](devenv.md#clippy) ยังช่วยในการนำแนวทางการตั้งชื่อมาใช้ได้ด้วยหมวดลินต์ `style`
+นอกจากคอมไพเลอร์แล้ว เครื่องมือ [`clippy`](devenv.md#clippy) ยังช่วยให้ปฏิบัติตามแนวทางการตั้งชื่อได้ด้วยหมวดลินต์ `style`
 ตัวอย่างเช่น ลินต์ [`wrong_self_convention`](https://rust-lang.github.io/rust-clippy/master/index.html#wrong_self_convention) ตรวจสอบความสอดคล้องระหว่างชื่อเมธอดแปลงชนิดกับชนิดข้อมูลตัวรับ (receiver type) (`self`, `&self`, `&mut self`) ตาม [`(C-CONV)`]
 
 <!--

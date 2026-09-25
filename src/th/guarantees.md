@@ -24,20 +24,20 @@ references:
 
 <div class="example">
 
-การอ้างอิงตัวชี้ null (null pointer) เป็น *UB* ในทางกลับกัน การ `unwrap` ออบเจ็กต์ `None` ถือว่านิยามไว้ดีแล้ว (well defined) เพราะเป็นภาษาที่จัดการข้อผิดพลาดนี้เอง (โดยการเรียกแพนิก)
+การดีเรฟเฟอเรนซ์พอยน์เตอร์ null (null pointer) เป็น *UB* ในทางกลับกัน การ `unwrap` ออบเจ็กต์ `None` ถือว่านิยามไว้ดีแล้ว (well defined) เพราะเป็นภาษาที่จัดการข้อผิดพลาดนี้เอง (โดยการเรียกแพนิก)
 
 </div>
 
-รายการข้อผิดพลาดในการเขียนโปรแกรมที่นำไปสู่ UB ได้[ระบุไว้](https://doc.rust-lang.org/reference/behavior-considered-undefined.html)
+รายการข้อผิดพลาดในการเขียนโปรแกรมที่นำไปสู่ UB มี[ระบุไว้](https://doc.rust-lang.org/reference/behavior-considered-undefined.html)
 ใน [Rust reference @rust-reference] ในบรรดาข้อผิดพลาดเหล่านั้น ข้อผิดพลาดต่อไปนี้น่าสนใจเป็นพิเศษ:
 
-* ต้องไม่อ้างอิงตัวชี้ไปยังที่อยู่หน่วยความจำที่ยังไม่ถูกจัดสรรหรือไม่ตรงแนว (ตัวชี้ที่ dangling) ซึ่งหมายความรวมถึง
+* ต้องไม่ดีเรฟเฟอเรนซ์พอยน์เตอร์ที่ชี้ไปยังที่อยู่หน่วยความจำที่ยังไม่ได้จัดสรรหรือไม่ตรงแนว (ตัวชี้ที่ dangling) ซึ่งหมายความรวมถึง
   * ต้องไม่เกิดบัฟเฟอร์ล้น (buffer overflow)
   * ต้องไม่เข้าถึงหน่วยความจำที่ถูกคืนแล้ว
   * ต้องไม่เข้าถึงแบบไม่ตรงแนว
-* ค่าที่ถูกชี้ต้อง[สอดคล้อง](https://doc.rust-lang.org/reference/behavior-considered-undefined.html#r-undefined.invalid)กับชนิดข้อมูลของตัวชี้ ตัวอย่างเช่น ค่าที่ถูกชี้โดยตัวชี้ชนิดบูลีนจะต้องเป็นไบต์ที่มีค่า 1 หรือ 0
+* ค่าที่พอยน์เตอร์ชี้ไปต้อง[สอดคล้อง](https://doc.rust-lang.org/reference/behavior-considered-undefined.html#r-undefined.invalid)กับชนิดข้อมูลของพอยน์เตอร์ ตัวอย่างเช่น ค่าที่พอยน์เตอร์ชนิดบูลีนชี้ไปจะต้องเป็นไบต์ที่มีค่า 1 หรือ 0
 * การปฏิบัติตาม[กฎการตั้งชื่อแทนข้อมูลหลายทาง (aliasing rules)](https://doc.rust-lang.org/reference/behavior-considered-undefined.html#r-undefined.alias) (ดู[ตัวอย่าง](https://doc.rust-lang.org/nomicon/aliasing.html)เพิ่มเติมได้ใน [Rustonomicon @nomicon]): การอ้างอิงแบบเปลี่ยนค่าได้ (mutable reference) ต้องไม่ถูกแชร์
-* ต้องไม่[เข้าถึงพร้อมกัน](https://doc.rust-lang.org/reference/behavior-considered-undefined.html#r-undefined.race) (การอ่าน/เขียนเป็นไปไม่ได้ในขณะที่กำลังเขียนอยู่พร้อมกัน) ไปยังที่อยู่หน่วยความจำเดียวกัน (ดู[ตัวอย่าง](https://doc.rust-lang.org/nomicon/races.html)เพิ่มเติมได้ใน [Rustonomicon @nomicon])
+* ต้องไม่[เข้าถึงที่อยู่หน่วยความจำเดียวกันพร้อมกัน](https://doc.rust-lang.org/reference/behavior-considered-undefined.html#r-undefined.race) (การอ่าน/เขียนเป็นไปไม่ได้ในขณะที่กำลังเขียนอยู่พร้อมกัน) (ดู[ตัวอย่าง](https://doc.rust-lang.org/nomicon/races.html)เพิ่มเติมได้ใน [Rustonomicon @nomicon])
 
 ## การรับประกันของ Rust
 
@@ -51,7 +51,7 @@ references:
 
 แม้จะมีการรับประกันความปลอดภัยของหน่วยความจำ (memory safety) เหล่านี้ ภาษาก็ไม่ได้ป้องกัน
 
-* การรั่วไหลของทรัพยากร (หน่วยความจำ, I/O, ...) (ดู[ส่วนการจัดการหน่วยความจำ](unsafe/memory.md#chapter-memory))
+* การรั่วของทรัพยากร (หน่วยความจำ, I/O, ...) (ดู[ส่วนการจัดการหน่วยความจำ](unsafe/memory.md#chapter-memory))
 * การล้นของตัวเลข (ดู[ส่วนการดำเนินการกับจำนวนเต็ม](integer.md#chapter-integer))
 
 </div>
