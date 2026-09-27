@@ -1,20 +1,13 @@
 # rust-guide-th
 
-```
-██████╗ ██╗   ██╗███████╗████████╗      ██████╗ ██╗   ██╗██╗██████╗ ███████╗   ████████╗██╗  ██╗
-██╔══██╗██║   ██║██╔════╝╚══██╔══╝     ██╔════╝ ██║   ██║██║██╔══██╗██╔════╝   ╚══██╔══╝██║  ██║
-██████╔╝██║   ██║███████╗   ██║ █████╗ ██║  ███╗██║   ██║██║██║  ██║█████╗ █████╗ ██║   ███████║
-██╔══██╗██║   ██║╚════██║   ██║ ╚════╝ ██║   ██║██║   ██║██║██║  ██║██╔══╝ ╚════╝ ██║   ██╔══██║
-██║  ██║╚██████╔╝███████║   ██║        ╚██████╔╝╚██████╔╝██║██████╔╝███████╗      ██║   ██║  ██║
-╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝         ╚═════╝  ╚═════╝ ╚═╝╚═════╝ ╚══════╝      ╚═╝   ╚═╝  ╚═╝
-```
+[![Deploy](https://github.com/suradet-ps/rust-guide-th/actions/workflows/docs.yml/badge.svg)](https://github.com/suradet-ps/rust-guide-th/actions/workflows/docs.yml)
+[![GitHub Pages](https://img.shields.io/badge/Pages-live-2ea44f)](https://suradet-ps.github.io/rust-guide-th/)
+[![License: Open Licence 2.0](https://img.shields.io/badge/License-Open%20Licence%202.0-blue.svg)](LICENSE.md)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/suradet-ps/rust-guide-th/issues)
 
 ---
 
 ## ◆ PULSE
-
-[![GitHub Pages](https://img.shields.io/badge/Pages-live-2ea44f)](https://suradet-ps.github.io/rust-guide-th/)
-[![License](https://img.shields.io/badge/license-Open%20Licence%202.0-blue.svg)](#-anatomy)
 
 Rust is memory safe by default - rust-guide-th maps the places where
 that guarantee must be earned. This is the complete Thai translation of
