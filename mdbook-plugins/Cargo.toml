@@ -16,7 +16,7 @@ regex = "1.11.3"
 log = "0.4.29"
 env_logger = "0.11.9"
 tempfile = "3.27.0"
-quick-xml = "0.38.3"
+quick-xml = "0.42.0"
 toml = "0.5"
 
 markdown = { version = "1.0.0", features = ["serde"] }
